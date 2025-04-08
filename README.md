@@ -56,7 +56,7 @@ The Cube image is ideal for FAST and Shi Thomas, since it is taken from an angle
 
 ## 📁 Files
 
-- `implementations.py`: Python script using OpenCV's SIFT implementation
+- `implementations.ipynb`: Python script using OpenCV's SIFT implementation
 - `tajMahal.jpg`, `tajMahak1.jpg`: Input images
 - `results/matches_taj.png`: Output with matched keypoints
 - `result/shi_thomas_cube.png`: Output of Shi Thomas Corner Detection 
