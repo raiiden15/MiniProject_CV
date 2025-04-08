@@ -7,9 +7,6 @@ This project explores different computer vision algorithms to detect and compare
 **Shi Thomas Corner Detection**
 **FAST algorithm for Corner Detection** 
 
-**SIFT**
-By extracting and comparing scale- and rotation-invariant features from both images, we show how SIFT can accurately map corresponding structures—even when the viewpoints and perspectives vary.
----
 ## 📸 Images Used
 
 Two real-world images of the **Taj Mahal**:
