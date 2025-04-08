@@ -4,7 +4,7 @@
 ## 🔍 Project Overview
 This project explores different computer vision algorithms to detect and compare feature points in high-resolution images. Specifically, we apply:
 **SIFT (Scale-Invariant Feature Transform)**
-**Shi Thomas Corner Detection**
+**Shi-Tomasi Corner Detection** 
 **FAST algorithm for Corner Detection** 
 
 ## 📸 Images Used
@@ -43,30 +43,42 @@ The Cube image is ideal for FAST and Shi Thomas, since it is taken from an angle
 - No descriptor generation – just raw keypoint localization
 
 📁 Output:
-``fast_corners_tajmahal.png``
+``fast_algo_cube.png``
+
+### 3. Shi-Tomasi Corner Detection
+
+- Very **precise** for clean images (used on a resized cube image)  
+- Uses `cv2.goodFeaturesToTrack`  
+- Slower on large images; needs resizing 
+
+📁 Output:
+``shi_thomas_cube.png``
 
 ## 📁 Files
 
 - `sift_tajmahal.py`: Python script using OpenCV's SIFT implementation
 - `taj1.jpg`, `taj2.jpg`: Input images
 - `results/matches_taj.png`: Output with matched keypoints
+- `result/shi_thomas_cube.png`: Output of Shi Thomas Corner Detection 
 - `results/fast_algo_cube.png`: Output of Fast Algorithm for corner detection
 - `README.md`: You're reading it 😊
 
 ---
 
-## 💡 Key Takeaway
 
-SIFT's ability to detect scale- and rotation-invariant features makes it ideal for real-world use cases like object recognition, panoramic stitching, and 3D reconstruction—even with images taken from different angles and distances.
+## 📊 Output Comparison
 
----
+| Algorithm     | Speed        | Accuracy      | High-Res Compatible | Corners/Matches |
+|---------------|--------------|---------------|----------------------|-----------------|
+| **FAST**      | 🚀 Very Fast | ⚠️ Medium     | ✅ Yes               | ~800            |
+| **Shi-Tomasi**| 🐢 Slower    | ✅ High       | ⚠️ Needs Resizing    | ~100            |
+| **SIFT**      | ⚡ Moderate   | ✅✅ Very High | ✅ Yes               | Matched Points  |
 
-## 🔧 Requirements
 
-- Python 3.x
-- OpenCV (with `opencv-contrib-python` for SIFT support)
-- Matplotlib (for visualization)
+## 🧠 Conclusion
 
-Install dependencies:
-```bash
-pip install opencv-contrib-python matplotlib
+- 🔹 **FAST** is great for speed and high-res images but less accurate.  
+- 🔹 **Shi-Tomasi** gives better corner precision but slows down on large images.  
+- 🔹 **SIFT** is best for matching across different views and transformations.  
+
+
