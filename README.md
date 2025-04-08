@@ -13,11 +13,11 @@ Two real-world images of the **Taj Mahal**:
 - `tajMahal.jpg` – Frontal view
 - `tajMahal2.jpg` – Angled/side view
 - `Cube.jpg`  - A manually taken image of Cube, removed background.
-- 
+  
 These images are ideal for testing SIFT because:
 - They include rich textures and structural details
 - The viewpoints differ, testing scale and rotation invariance
--
+
 The Cube image is ideal for FAST and Shi Thomas, since it is taken from an angle where many corners are visible 
 ---
 
